@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reschedule Movie Tickets</title>
+    <style>
+        .movie-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+        }
+  .movie-image {
+            max-width: 500px; 
+            max-height: 400px;
+            margin: 0 auto; 
+        }
+        p{
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .time-slot {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 80px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .time-slot:hover {
+            background-color: #ccc;
+        }
+
+        .time-slot.available {
+            background-color: limegreen;
+        }
+
+        .time-slot.unavailable {
+            background-color: Red;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            color: white;
+        }
+        
+        /* Style for the custom navbar */
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar-brand img {
+            width: 80px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Navbar -->
+    <div class="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./profile.html">My Profile</a></li>
+        </ul>
+    </div>
+    <!-- End of Custom Navbar -->
+
+    <div class="movie-title">IRAIVAN</div>
+        <div >
+        <img class="movie-image" src="iraivan.jpg" alt="IRAIVAN">
+    </div>
+    <div class="time-slots">
+        <div><p>Reschedule Booked Movie on October 7, 2023</p></div>
+        <div class="time-slot available">10:00 AM</div>
+        <div class="time-slot available">12:00 PM</div>
+        <div class="time-slot unavailable">2:00 PM</div>
+        <div class="time-slot available">4:00 PM</div>
+        <div class="time-slot available">6:00 PM</div>
+        <div class="time-slot unavailable">8:00 PM</div>
+    </div>
+    <script>
+        const timeSlots = document.querySelectorAll('.time-slot');
+
+        timeSlots.forEach(timeSlot => {
+            timeSlot.addEventListener('click', () => {
+                if (timeSlot.classList.contains('available')) {
+                    alert('Rescheduled movie ticket to ' + timeSlot.textContent);
+                } else {
+                    alert('Selected time slot is not available.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

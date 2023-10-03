@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Status</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            color: black;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar-brand img {
+            width: 80px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .ticket-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .ticket {
+            display: flex; /* Added flexbox to arrange content in a row */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .ticket h2 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .ticket-status {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .movie-info {
+            flex: 1; /* To make the movie info take up remaining space */
+            padding-left: 20px; /* Add some spacing between ticket and movie info */
+        }
+
+        .movie-image {
+            max-width: 200px; /* Adjust the image size */
+            max-height: 300px; /* Adjust the image size */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Navbar -->
+    <div class="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./profile.html">My Profile</a></li>
+        </ul>
+    </div>
+    <!-- End of Custom Navbar -->
+
+    <div class="ticket-container">
+        <div class="ticket">
+            <img class="movie-image" src="iraivan.jpg" alt="IRAIVAN">
+            <div class="movie-info">
+                <h2>IRAIVAN</h2>
+                <p class="ticket-status">Status: Paid</p>
+                <p><strong>About Movie: </strong>The city of Chennai lives in fear of a psycho killer. Confidence in the police wanes until Arjun and Andrew join. Arjun, with a dark past, unveils truths about the killer. They make an arrest, but he escapes and chaos ensues. When Arjun loses both Andrew and his love interest, he descends into darness, then sets out to vanquish the killers.</p>
+                <p>Date: October 7, 2023</p>
+                <p>Time: 2:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="ticket">
+            <img class="movie-image" src="Chandramukhi2.jpg" alt="Chandramukhi2">
+            <div class="movie-info">
+                <h2>Chandramukhi 2</h2>
+                <p class="ticket-status">Status: Pending</p>
+                <p><strong>About Movie:</strong> A wealthy family faces numerous problems and reunites with their long-lost relatives to pray to their deity for solutions, unaware it will reawaken the feud between a classical dancer, Chandramukhi and Vettaiyan Raja from centuries ago.</p>
+                <p>Date: October 10, 2023</p>
+                <p>Time: 4:30 PM</p>
+            </div>
+        </div>
+        
+        <!-- Add more ticket entries as needed -->
+    </div>
+</body>
+</html>
